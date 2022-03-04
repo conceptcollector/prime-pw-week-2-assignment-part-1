@@ -24,7 +24,7 @@ let luckyNumber = 11;
 // 'My name is (full name), and I think (lucky number) is a winner!'.
 // Refer back to the videos if you need help with this one.
 
-console.log( `My name is ${fullName} and I think ${luckyNumber} is a winner!` ); /* Chris here! Just showing off (while I still can) with what I think is a slightly slicker way to make a sentence using variables. Note the backticks instead of single or double quotes as they are required when using template literals. */
+console.log(`My name is ${fullName} and I think ${luckyNumber} is a winner!`); /*I opted for using template literals here, since I think it's slightly quicker.*/
 
 // 7 - Create a variable named `adventurous` and set it to a boolean value (true or false)
 
@@ -89,6 +89,16 @@ if(pets < allowedPets){
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
 
+let mostPets
+
+if (pets >= friendsPets){
+    mostPets = pets;
+}
+else if (friendsPets > pets){
+    mostPets = friendsPets;
+}
+console.log(mostPets);
+
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
 //      "Second is the best" if your lucky number is 2
@@ -96,4 +106,20 @@ if(pets < allowedPets){
 //      Otherwise, log "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
 
+switch(luckyNumber){
+    case 1:
+        console.log('First is the worst');
+        break;
+    case 2:
+        console.log('Second is the best');
+        break;
+    case 3:
+        console.log('Third is the one with the polka dot dress');
+        break;
+    default:
+        console.log('Luck is what happens when preparation meets opportunity');
+}
+
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+
+adventurous ? console.log('Adventures are great!') : 'How about we stay home?';
